@@ -47,7 +47,7 @@ function getPage(path) {
     var html = '<xmp is="ms-view" class="view-container" ms-widget="{path:\'' + path + '\',page: @page}"><xmp>';
     return html
 }
-var pages = ["aaa/first","bbb/secord"];
+var pages = ["aaa/aaa","bbb/bbb"];
 pages.forEach(function(pathname) {
 	console.log(pathname)
     var html = require('text!./pages/' + pathname + '.html');
@@ -62,7 +62,7 @@ pages.forEach(function(pathname) {
 
 
 avalon.history.start({
-    root: "/aaa/first"
+    root: "/aaa/aaa"
 });
 // avalon.router.navigate('/bb/second', 0);
 // avalon.history.setHash('/bb/second');
