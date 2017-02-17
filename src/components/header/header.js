@@ -1,0 +1,12 @@
+avalon.component('ms-header',{
+	template:require('text!./header.html'),
+	defaults:{
+		nav:[{
+			href:'/aaa',
+			name:"首页"
+		},{
+			href:'/bbb',
+			name:"关于"
+		}]
+	}
+})

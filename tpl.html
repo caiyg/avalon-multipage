@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>电视台</title>
+    {% if (o.htmlWebpackPlugin.files.favicon) { %}
+    <link rel="shortcut icon" href="{%=o.htmlWebpackPlugin.files.favicon%}"> {% } %} {% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet"> {% } %}
+</head>
+
+<body class="lucky-theme">
+    <div id="viewporter" ms-controller="app">
+        <!--[if lte IE 9]><div class='iealert in' id='iealert'><div class='iealert-bg'></div><div class='iealert-content'><a href='#' class='iealert-close' data-toggle='collapse' data-target='#iealert' >close</a></div></div> <![endif]-->
+        <div class="affix flash_messages-wrapper" data-spy="affix" data-offset-top="0">
+            <div class="flash_messages alert alert-box" style="display: none;">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <h4><i class="icon-info-sign"></i></h4>
+                <p>message-here</p>
+            </div>
+        </div>
+        <div ms-widget="{is:'ms-header'}"></div>
+        <div ms-html="@currPage"></div>
+    </div>
+    {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+    <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
+    {% } %}
+
+</body>
+
+</html>
+ 
