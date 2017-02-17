@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin"); //将组件中的样式乖乖提取出来
 var HtmlWebpackPlugin = require('html-webpack-plugin'); //html模板插入代码
-
+var glob = require('glob');
 
 //webpck插件
 var plugins = [
@@ -14,7 +14,13 @@ var plugins = [
   new HtmlWebpackPlugin({
     // title: "电视台",
     template: "tpl.html",
-    filename: "index.html",
+    filename: "home.html",
+    hash: true
+  }),
+  new HtmlWebpackPlugin({
+    // title: "电视台",
+    template: "tpl.html",
+    filename: "about.html",
     hash: true
   }),
   //将样式统一发布到style.css中
@@ -36,6 +42,7 @@ var plugins = [
 
 var entry = {
   home:'./src/views/home/main.js',
+  about:'./src/views/about/main.js',
   vendor:['avalon2','jquery','mmRouter','lodash'],
 },
   // buildPath = "./../JAVA_APP/cn.com.ava.education.maven/cn.com.ava.education.web/src/main/webapp/"

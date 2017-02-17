@@ -1,4 +1,4 @@
-webpackJsonp([1],[
+webpackJsonp([0],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -7,7 +7,7 @@ webpackJsonp([1],[
 	__webpack_require__(2);
 	var root = avalon.define({
 		$id:'app',
-		contents:"hello!here is home",
+		contents:"hello!here is about",
 		alert:'test',
 		currPath:'',
 		currPage:''
@@ -54,8 +54,8 @@ webpackJsonp([1],[
 	var pages = ["aaa/aaa","bbb/bbb"];
 	pages.forEach(function(pathname) {
 		console.log(pathname)
-	    var html = __webpack_require__(10)("./" + pathname + '.html');
-	    var vm = __webpack_require__(13)("./" + pathname + '.js');
+	    var html = __webpack_require__(4)("./" + pathname + '.html');
+	    var vm = __webpack_require__(7)("./" + pathname + '.js');
 	    addState(pathname, vm, html);
 	    avalon.router.add("/"+pathname, function(a) {
 	    	console.log(this.path)
@@ -81,18 +81,12 @@ webpackJsonp([1],[
 /* 1 */,
 /* 2 */,
 /* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./aaa/aaa.html": 11,
-		"./bbb/bbb.html": 12
+		"./aaa/aaa.html": 5,
+		"./bbb/bbb.html": 6
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -105,28 +99,28 @@ webpackJsonp([1],[
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 10;
+	webpackContext.id = 4;
 
 
 /***/ },
-/* 11 */
+/* 5 */
 /***/ function(module, exports) {
 
-	module.exports = "<div ms-controller=\"aaa\">\r\n\tthis is aaa\r\n\t<a href=\"about.html\">tob</a>\r\n</div>"
+	module.exports = "<div ms-controller=\"aaa\">\r\n\tthis is aaa of about\r\n\t\r\n</div>"
 
 /***/ },
-/* 12 */
+/* 6 */
 /***/ function(module, exports) {
 
-	module.exports = "<div controller=\"bbb\">\r\n\tthis is bbb\r\n</div>"
+	module.exports = "<div controller=\"bbb\">\r\n\tthis is bbb of about\r\n</div>"
 
 /***/ },
-/* 13 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./aaa/aaa.js": 14,
-		"./bbb/bbb.js": 15
+		"./aaa/aaa.js": 8,
+		"./bbb/bbb.js": 9
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -139,11 +133,11 @@ webpackJsonp([1],[
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 13;
+	webpackContext.id = 7;
 
 
 /***/ },
-/* 14 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(avalon) {var vm = avalon.define({
@@ -156,7 +150,7 @@ webpackJsonp([1],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 15 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(avalon) {console.log('bbb')
@@ -171,4 +165,4 @@ webpackJsonp([1],[
 
 /***/ }
 ]);
-//# sourceMappingURL=home.js.map
+//# sourceMappingURL=about.js.map

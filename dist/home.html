@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html class="grayIcon">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <title>电视台</title>
-     
+    <!-- {% if (o.htmlWebpackPlugin.files.favicon) { %}
+    <link rel="shortcut icon" href="{%=o.htmlWebpackPlugin.files.favicon%}"> {% } %} {% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet"> {% } %} -->
 </head>
 
 <body class="lucky-theme">
@@ -17,16 +19,14 @@
                 <p>message-here</p>
             </div>
         </div>
-        <div ms-view="header"></div>
-        <div ms-view=""></div>
+        <div ms-widget="{is:'ms-header'}"></div>
+        <div ms-html="@currPage"></div>
     </div>
-    
-    <script src="vendor.js?04b9455f6465a6919a6e"></script>
-    
-    <script src="home.js?04b9455f6465a6919a6e"></script>
-    
+ <!--    {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+    <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
+    {% } %} -->
 
-</body>
+<script type="text/javascript" src="vendor.js?da35810128b4cfa10739"></script><script type="text/javascript" src="home.js?da35810128b4cfa10739"></script></body>
 
 </html>
  
