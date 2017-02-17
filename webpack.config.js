@@ -21,18 +21,22 @@ var plugins = [
   new ExtractTextPlugin("style.css", {
     allChunks: true,
     disable: false
-  })
+  }),
   // ,
   // // 使用 ProvidePlugin 加载使用率高的依赖库
-  // new webpack.ProvidePlugin({
-  //   $: "jquery",
-  //   jQuery: "jquery"
-  // })
+  new webpack.ProvidePlugin({
+    $: "jquery",
+    jQuery: "jquery",
+    "window.jQuery": "jquery",
+    "avalon": "avalon2",
+    "window.avalon": "avalon2",
+    "_": "lodash"
+  })
 ];
 
 var entry = {
   home:'./src/views/home/main.js',
-  vendor:['avalon2','jquery','mmRouter'],
+  vendor:['avalon2','jquery','mmRouter','lodash'],
 },
   // buildPath = "./../JAVA_APP/cn.com.ava.education.maven/cn.com.ava.education.web/src/main/webapp/"
   // buildPath = "./../../JAVA_APP/cn.com.ava.university.maven/cn.com.ava.university.web/src/main/webapp/";

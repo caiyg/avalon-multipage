@@ -20,7 +20,7 @@ avalon.component('ms-view', {
     template: '<div ms-html="@page" class="ms-view"></div>',
     defaults: {
         page: '&nbsp;',
-        path: 'no ',
+        path: 'no',
         onReady: function(e) {
             var path = e.vmodel.path;
             var state = states[path];
@@ -47,13 +47,14 @@ function getPage(path) {
     var html = '<xmp is="ms-view" class="view-container" ms-widget="{path:\'' + path + '\',page: @page}"><xmp>';
     return html
 }
-var pages = ["aaa/aaa","bbb/bbb"];
+var pages = ["aaa/first","bbb/secord"];
 pages.forEach(function(pathname) {
+	console.log(pathname)
     var html = require('text!./pages/' + pathname + '.html');
     var vm = require('./pages/' + pathname + '.js');
     addState(pathname, vm, html);
-    console.log(this.path)
     avalon.router.add("/"+pathname, function(a) {
+    	console.log(this.path)
         root.currPath = this.path;
         root.currPage = getPage(this.path);
     })
@@ -61,7 +62,7 @@ pages.forEach(function(pathname) {
 
 
 avalon.history.start({
-    root: "/bbb/bbb"
+    root: "/aaa/first"
 });
 // avalon.router.navigate('/bb/second', 0);
 // avalon.history.setHash('/bb/second');

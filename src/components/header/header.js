@@ -2,10 +2,10 @@ avalon.component('ms-header',{
 	template:require('text!./header.html'),
 	defaults:{
 		nav:[{
-			href:'/aaa',
+			href:'#!/aaa/first',
 			name:"首页"
 		},{
-			href:'/bbb',
+			href:'#!/bbb/secord',
 			name:"关于"
 		}]
 	}
